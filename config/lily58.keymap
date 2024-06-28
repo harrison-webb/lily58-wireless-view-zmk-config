@@ -12,10 +12,10 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
-        shift_space_to_delete: shift_space_to_delete {
+        shift_space_to_backspace: shift_space_to_backspace {
             compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_SPACE_TO_DELETE";
-            bindings = <&kp SPACE>, <&kp DELETE>;
+            label = "SHIFT_SPACE_TO_BACKSPACE";
+            bindings = <&kp SPACE>, <&kp BACKSPACE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -35,11 +35,11 @@
 
             display-name = "Base";
             bindings = <
-&kp CAPSLOCK  &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                            &kp N6  &kp N7      &kp N8     &kp N9   &kp N0    &kp EQUAL
-&kp TAB       &kp Q   &kp W   &kp E     &kp R     &kp T                                             &kp Y   &kp U       &kp I      &kp O    &kp P     &kp MINUS
-&kp LCTRL     &kp A   &kp S   &kp D     &kp F     &kp G                                             &kp H   &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
-&kp UNDER     &kp Z   &kp X   &kp C     &kp V     &kp B   &kp LBKT          &kp RBKT                &kp N   &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
-                              &kp LALT  &kp LGUI  &mo 1   &kp LEFT_SHIFT    &shift_space_to_delete  &mo 2   &kp ESCAPE  &trans
+&kp CAPSLOCK  &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                               &kp N6  &kp N7      &kp N8     &kp N9   &kp N0    &kp EQUAL
+&kp TAB       &kp Q   &kp W   &kp E     &kp R     &kp T                                                &kp Y   &kp U       &kp I      &kp O    &kp P     &kp MINUS
+&kp LCTRL     &kp A   &kp S   &kp D     &kp F     &kp G                                                &kp H   &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
+&kp UNDER     &kp Z   &kp X   &kp C     &kp V     &kp B   &kp LBKT          &kp RBKT                   &kp N   &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
+                              &kp LALT  &kp LGUI  &mo 1   &kp LEFT_SHIFT    &shift_space_to_backspace  &mo 2   &kp ESCAPE  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
